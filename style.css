@@ -1,14 +1,39 @@
+button {
+    all: unset;
+    font-size: 0.9rem;
+    padding: 0.1rem 0.2rem;
+    color: black;
+    background: #ebebeb;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+    border: 1px solid #333;
+}
+
+button:hover {
+    background: #f7f7f7;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button:disabled {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
 #page {
     display: grid;
-    grid-template-columns: 155px 1700px 300px;
-    grid-template-rows: 125px 1fr 60px;
+    grid-template-columns: 10% 87% 13%;
+    grid-template-rows: 10% 83% 6% 1%;
     height: 1125px;
     gap: 10px;
     width: 90%;
     grid-template-areas:
         "header header header"
         "nav main aside"
-        "footer footer footer";
+        "footer footer footer"
+        "empty empty empty";
 }
 
 header {
@@ -97,7 +122,12 @@ main {
 }
 
 .seed-button {
-    background: linear-gradient(to top, rgba(139,69,19, 0.5), rgba(0,128,0, 0.5));
+    background: linear-gradient(to top, rgba(139,69,19, 0.6), rgba(0,128,0, 0.6));
+}
+
+/* Effet au survol */
+.seed-button:hover {
+    background: linear-gradient(to top, rgba(139,69,19, 0.75), rgba(0,128,0, 0.75));
 }
 
 .first-area {
