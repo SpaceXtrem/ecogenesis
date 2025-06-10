@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>website-online</title>
+  </head>
+  <body><div id="page">
+    <header>
+      <h1 class="title">EcoGenesis...</h1>
+      <p class="subtitle">It all starts with a seed.<br>The rest is up to you.</p>
+      <nav class="navigation-bar">navigation bar</nav>
+      <p class="author"><u>ARK@D<sub>studio</sub></u></p>
+    </header>
+    <nav>
+
+    </nav>
+    <main><div id="content">
+
+      <div class="seeds">
+        <h2><span class="seed-counter">Seeds</span> : <span id="seed-count">1</span></h2>
+        <button onclick="plantSeed()" id="plant-button" class="seed-button">Plant a Seed</button>
+        <button onclick="harvest()" id="harvest-button" class="seed-button" style="display:none;">Harvest</button>
+        <!--
+        <button onclick="cheatSeeds()" id="cheat-seeds-button">Cheat Seeds</button>
+        <button onclick="cheatPlants()" id="cheat-plants-button">Cheat Plants</button>
+        <button onclick="cheatMoney()" id="cheat-money-button">Cheat Money</button>
+        <br><br><br>
+        -->
+      </div>
+
+      <div class="first-area">
+        <h3>Business</h3><hr>
+        <p><b>Money : </b><span id="money-count">$ 0.00</span></p>
+        <p><b>Unused Plants : </b><span id="plant-count">0</span></p>
+        <p><b>Price per Seed : </b><span id="price-count">$ 0.03</span></p>
+        <fieldset><legend><b>Marketing : </b><span id="marketing-count">Level 1</span></legend>
+        <p>Cost : <span id="marketing-price">$ 0.45</span> = <button onclick="upgradeMarketing()" id="marketing-button">Higher Level</button></p>
+        <button onclick="sell()" id="sell-button">Sell a Plant</button><span id="text-auto-seller"></span></fieldset>
+        <br><br>
+        <h3>Manufacturing</h3><hr>
+        <p><b>Types of Seeds produced : </b><select id="seeds-type"><option value="Classical" selected="selected">Classical</option><option id="full-of-seeds" value="Full of Seeds" hidden="hidden">Full of Seeds</option></select></p>
+        <fieldset><legend><b>Time to Grow : </b><span id="grow-count">3.00 secs</span></legend>
+        <p>Cost : <span id="grow-price-count">$ 1.00</span> = <button onclick="upgradeGrow()" id="grow-button">Higher Level</button></p></fieldset>
+      </div>
+
+      <div class="second-area">
+        <h3>Projects</h3><hr>
+        <br>
+        <div id="fieldset-project-first-buyer">
+          <fieldset class="project">
+            <br><b>First Buyer</b><i style="font-size:0.8rem;"> — Cost : 10 Seeds</i><br>
+            <p>Congratulations, you meet your First Buyer ! He buys you 10 Seeds for $ 10.</p>
+            <button class="getBtn" onclick="projectFirstBuyer()" id="project-first-buyer">Get</button>
+          </fieldset>
+          <br>
+        </div>
+        <div id="fieldset-project-super-fertilizer">
+          <fieldset class="project">
+            <br><b>Super Fertilizer</b><i style="font-size:0.8rem;"> — Cost : 40 Seeds</i><br>
+            <p>Thanks to this Super Fertilizer, you instantly turn 40 Seeds into 40 Plants.</p>
+            <button class="getBtn" onclick="projectSuperFertilizer()" id="project-super-fertilizer">Get</button>
+          </fieldset>
+          <br>
+        </div>
+        <div id="fieldset-project-auto-seller">
+          <fieldset class="project">
+            <br><b>Auto-Seller</b><i style="font-size:0.8rem;"> — Cost : $ 20</i><br>
+            <p>The Auto-Seller automates the sale of Plants.</p>
+            <button class="getBtn" onclick="projectAutoSeller()" id="project-auto-seller">Get</button>
+          </fieldset>
+          <br>
+        </div>
+        <div id="fieldset-project-full-of-seeds">
+          <fieldset class="project">
+            <br><b>New Plant : Full of Seeds</b><i style="font-size:0.8rem;"> — Condition : Marketing Level 3</i><br>
+            <p>You unlock a New Plant : Full of Seeds. It has no market value and therefore will not earn you any $. However, it produces a large quantity of Seeds !</p>
+            <button class="getBtn" onclick="projectFullOfSeeds()" id="project-full-of-seeds">Get</button>
+          </fieldset>
+          <br>
+        </div>
+      </div>
+
+      <div class="third-area">
+        <h3>Investments</h3><hr>
+        <p><b>Risk : </b>Low</p>
+        <p><b>Money invested : </b>$ 0.00</p>
+      </div>
+
+    </div></main>
+    <aside>
+      <img src="symbol.png" alt="Symbol of EcoGenesis" width=140% height=105% class="symbol">
+    </aside>
+    <footer>
+      <p class="information">Created by <u>ARK@D<sub>studio</sub></u>, a passionate developer, designer, and digital explorer. Thanks to GENTOD, a video game that I created (GENTOD is the abbreviation of GameEngineforTwoDimension). Powered by cutting-edge tools such as <i>PyCharm</i> for development and <i>GitHub</i> for collaborative version control, continuous improvement, and public sharing. Special thanks to the tools, platforms, and individuals who inspired this journey, and to the community that continues to support it. This website was created in March 2025. The creation of the first .html file started on 3 June 2025. The release of the code on <i>GitHub</i> took place in July 2025. For inquiries, contributions, or collaborations, feel free to contact us or follow our journey through upcoming projects and ideas. The adventure has just begun. — All rights reserved. Unauthorized duplication, replication, or redistribution of any content without express permission is strictly prohibited.<br>
+        @2025 ArkadStudio France, Inc.</p>
+    </footer>
+  </div></body>
+</html>
