@@ -26,7 +26,7 @@ button:disabled {
     display: grid;
     grid-template-columns: 10% 87% 13%;
     grid-template-rows: 10% 83% 6% 1%;
-    height: 1125px;
+    height: 98vh;
     gap: 10px;
     width: 90%;
     grid-template-areas:
