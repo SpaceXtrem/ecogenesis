@@ -22,7 +22,7 @@
         <h2><span class="seed-counter">Seeds</span> : <span id="seed-count">1</span></h2>
         <button onclick="plantSeed()" id="plant-button" class="seed-button">Plant a Seed</button>
         <button onclick="harvest()" id="harvest-button" class="seed-button" style="display:none;">Harvest</button>
-        <!--
+
         <button onclick="cheatSeeds()" id="cheat-seeds-button">Cheat Seeds</button>
         <button onclick="cheatPlants()" id="cheat-plants-button">Cheat Plants</button>
         <button onclick="cheatMoney()" id="cheat-money-button">Cheat Money</button>
@@ -43,12 +43,17 @@
         <p><b>Types of Seeds produced : </b><select id="seeds-type"><option value="Classical" selected="selected">Classical</option><option id="full-of-seeds" value="Full of Seeds" hidden="hidden">Full of Seeds</option></select></p>
         <fieldset><legend><b>Time to Grow : </b><span id="grow-count">3.00 secs</span></legend>
         <p>Cost : <span id="grow-price-count">$ 1.00</span> = <button onclick="upgradeGrow()" id="grow-button">Higher Level</button></p></fieldset>
+        <fieldset><legend><b>Seed Storage</b></legend>
+          <p>Capacity : <span id="storage-count">1/20</span></p>
+          <p>Silos owned : <span id="silo-count">0</span></p>
+          <p>Silo price : <span id="silo-price">$ 2.00</span> = <button onclick="buySilo()" id="buy-silo-button">Buy a Silo</button></p>
+        </fieldset>
       </div>
 
       <div class="second-area">
         <h3>Projects</h3><hr>
         <br>
-        <div id="fieldset-project-first-buyer">
+        <div id="fieldset-project-first-buyer" hidden="hidden">
           <fieldset class="project">
             <br><b>First Buyer</b><i style="font-size:0.8rem;"> — Cost : 10 Seeds</i><br>
             <p>Congratulations, you meet your First Buyer ! He buys you 10 Seeds for $ 10.</p>
@@ -56,7 +61,7 @@
           </fieldset>
           <br>
         </div>
-        <div id="fieldset-project-super-fertilizer">
+        <div id="fieldset-project-super-fertilizer" hidden="hidden">
           <fieldset class="project">
             <br><b>Super Fertilizer</b><i style="font-size:0.8rem;"> — Cost : 40 Seeds</i><br>
             <p>Thanks to this Super Fertilizer, you instantly turn 40 Seeds into 40 Plants.</p>
@@ -64,19 +69,35 @@
           </fieldset>
           <br>
         </div>
-        <div id="fieldset-project-auto-seller">
+        <div id="fieldset-project-auto-seller" hidden="hidden">
           <fieldset class="project">
-            <br><b>Auto-Seller</b><i style="font-size:0.8rem;"> — Cost : $ 20</i><br>
+            <br><b>Auto-Seller</b><i style="font-size:0.8rem;"> — Cost : $ 12</i><br>
             <p>The Auto-Seller automates the sale of Plants.</p>
             <button class="getBtn" onclick="projectAutoSeller()" id="project-auto-seller">Get</button>
           </fieldset>
           <br>
         </div>
-        <div id="fieldset-project-full-of-seeds">
+        <div id="fieldset-project-full-of-seeds" hidden="hidden">
           <fieldset class="project">
             <br><b>New Plant : Full of Seeds</b><i style="font-size:0.8rem;"> — Condition : Marketing Level 3</i><br>
             <p>You unlock a New Plant : Full of Seeds. It has no market value and therefore will not earn you any $. However, it produces a large quantity of Seeds !</p>
             <button class="getBtn" onclick="projectFullOfSeeds()" id="project-full-of-seeds">Get</button>
+          </fieldset>
+          <br>
+        </div>
+        <div id="fieldset-project-advertising-campaign" hidden="hidden">
+          <fieldset class="project">
+            <br><b>New Advertising Campaign</b><i style="font-size:0.8rem;"> — Cost : 50 Seeds</i><br>
+            <p>Following your New Advertising Campaign, Marketing is increased by an additional 50%.</p>
+            <button class="getBtn" onclick="projectAdvertisingCampaign()" id="project-advertising-campaign">Get</button>
+          </fieldset>
+          <br>
+        </div>
+        <div id="fieldset-project-exceptional-seed" hidden="hidden">
+          <fieldset class="project">
+            <br><b>Exceptional Seeds</b><i style="font-size:0.8rem;"> — Condition : Time to Grow less than 1,3 secs</i><br>
+            <p>You discover how to increase the value of your Seeds by Maturation.</p>
+            <button class="getBtn" onclick="projectExceptionalSeed()" id="project-exceptional-seed">Get</button>
           </fieldset>
           <br>
         </div>
@@ -86,6 +107,23 @@
         <h3>Investments</h3><hr>
         <p><b>Risk : </b>Low</p>
         <p><b>Money invested : </b>$ 0.00</p>
+        <fieldset id="exceptional-seed-locked">
+          <legend><b>Exceptional Seed</b></legend>
+          <p>Not Yet Unlocked</p>
+        </fieldset>
+        <fieldset id="exceptional-seed-unlocked" hidden="hidden">
+          <legend><b>Exceptional Seed</b></legend>
+          <p>Value : $ 5</p>
+          <p>Time to Grow : 20 secs</p>
+          <p id="exceptional-status">Status : None</p>
+          <button onclick="plantExceptionalSeed()" id="plant-exceptional-button">Plant a Seed</button>
+          <button onclick="harvestExceptionalSeed()" id="harvest-exceptional-button" style="display:none;background:#f4f5d3;">Harvest and Sell the Exceptional Seed</button>
+        </fieldset>
+      </div>
+
+      <div class="fourth-area">
+        <h3>????????????</h3><hr>
+        <p><b>????? : </b>????</p>
       </div>
 
     </div></main>
